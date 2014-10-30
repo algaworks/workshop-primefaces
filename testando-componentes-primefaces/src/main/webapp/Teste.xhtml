@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8"/>
+</h:head>
+<h:body>
+
+	<h:form>
+		
+		<p:panel header="Cadastro de cliente">
+			<h:panelGrid columns="2">
+				<p:outputLabel value="Nome" />
+				<p:inputText />
+				
+				<p:outputLabel value="CPF" />
+				<p:inputMask mask="999.999.999-99" />
+				
+				<p:outputLabel value="Data de nascimento" />
+				<p:calendar pattern="dd/MM/yyyy" mask="99/99/9999" />
+				
+				<p:outputLabel/>
+				<p:commandButton value="Salvar"/>
+			</h:panelGrid>
+		</p:panel>
+		
+	</h:form>
+
+</h:body>
+</html>

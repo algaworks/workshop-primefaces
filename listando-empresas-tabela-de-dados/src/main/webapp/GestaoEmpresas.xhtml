@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Gestão de Empresas</title>
+</h:head>
+<h:body>
+
+	<f:metadata>
+		<f:viewAction action="#{gestaoEmpresasBean.consultar}" />
+	</f:metadata>
+
+	<p:dataTable value="#{gestaoEmpresasBean.todasEmpresas}" var="empresa"
+		emptyMessage="Nenhuma empresa cadastrada.">
+		<p:column headerText="Razão social">
+			<h:outputText value="#{empresa.razaoSocial}" />
+		</p:column>
+		<p:column headerText="Nome fantasia" width="250">
+			<h:outputText value="#{empresa.nomeFantasia}" />
+		</p:column>
+		<p:column headerText="CNPJ" width="160">
+			<h:outputText value="#{empresa.cnpj}" />
+		</p:column>
+	</p:dataTable>
+
+</h:body>
+</html>
